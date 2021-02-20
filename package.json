@@ -1,0 +1,48 @@
+{
+  "name": "electron-ts-react",
+  "version": "0.1.14",
+  "description": "Electron + TypeScript + React Template",
+  "homepage": "some-page.com",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "react:dev": "webpack serve --mode=development",
+    "electron:dev": "nodemon",
+    "start": "concurrently --kill-others \"npm run react:dev\" \"npm run electron:dev\"",
+    "start:prod": "npm run build && electron dist/main.js",
+    "dist:linux": "npm run build && electron-builder --linux"
+  },
+  "author": "Daniel Sosa <danielsosa.dev@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.0",
+    "concurrently": "^5.3.0",
+    "electron": "^11.2.3",
+    "electron-builder": "^22.9.1",
+    "html-webpack-plugin": "^5.0.0",
+    "nodemon": "^2.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.1.5",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "build": {
+    "appId": "com.domain.subdomain",
+    "productName": "Electron React TypeScript Template",
+    "files": [
+      "./build/**/*",
+      "./dist/*.js",
+      "./dist/*.html",
+      "./dist/*.js.map"
+    ],
+    "linux": {
+      "target": "deb",
+      "icon": "./build/icon.png",
+      "category": ""
+    }
+  }
+}
