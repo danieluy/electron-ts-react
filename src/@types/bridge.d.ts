@@ -1,8 +1,14 @@
 declare type Bridge = {
   /**
-   * Demo implementation that just returns a string concatenating a name
-   * @param name string
-   * @returns string
+   * Get username and basic system info
+   * @returns Info
    */
-  helloWorld: (name: string) => string;
+  getInfo: () => Info;
+};
+
+declare type Info = {
+  userName: string;
+  platform: string;
+  arch: string;
+  version: string;
 };
