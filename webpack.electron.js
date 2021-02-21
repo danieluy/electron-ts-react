@@ -2,7 +2,10 @@ const path = require('path');
 
 module.exports = {
   // Electron Entrypoint
-  entry: path.join(__dirname, 'src', 'main', 'index.ts'),
+  entry: {
+    main: path.join(__dirname, 'src', 'main', 'index.ts'),
+    preload: path.join(__dirname, 'src', 'bridge', 'preload.ts'),
+  },
   target: 'electron-main',
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -16,6 +19,6 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: '[name].js'
   }
 };

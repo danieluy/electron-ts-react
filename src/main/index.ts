@@ -1,5 +1,5 @@
 import { app, BrowserWindow } from 'electron';
-import { MAIN_WINDOW_TEMPLATE, BUILD, ENV, PORT } from '../constants';
+import { MAIN_WINDOW_TEMPLATE, BUILD, ENV, PORT, PRELOAD_SCRIPT } from '../constants';
 
 export const createWindow = async (): Promise<BrowserWindow | undefined> => {
   try {
@@ -8,6 +8,8 @@ export const createWindow = async (): Promise<BrowserWindow | undefined> => {
       height: 600,
       webPreferences: {
         nodeIntegration: false,
+        contextIsolation: true,
+        preload: PRELOAD_SCRIPT,
       }
     });
 

@@ -6,7 +6,7 @@ dotenv.config();
 
 module.exports = {
   entry: './src/renderer/index.tsx',
-  target: 'electron-renderer',
+  target: 'web',
   devtool: 'source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist/renderer.js'),
@@ -26,11 +26,11 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
+          "style-loader",
+          "css-loader",
+          "sass-loader",
         ],
-      }
+      },
     ]
   },
   output: {
