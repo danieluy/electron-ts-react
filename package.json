@@ -1,6 +1,6 @@
 {
   "name": "electron-ts-react",
-  "version": "0.1.15",
+  "version": "0.1.0",
   "description": "Electron + TypeScript + React Template",
   "homepage": "some-page.com",
   "main": "dist/main.js",
@@ -46,7 +46,7 @@
     ],
     "linux": {
       "target": "deb",
-      "icon": "./build/icon.png",
+      "icon": "./build/icon.icns",
       "category": ""
     }
   }
