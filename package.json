@@ -10,7 +10,8 @@
     "electron:dev": "nodemon",
     "start": "concurrently --kill-others \"npm run react:dev\" \"npm run electron:dev\"",
     "start:prod": "npm run build && electron dist/main.js",
-    "dist:linux": "npm run build && electron-builder --linux"
+    "dist:linux": "npm run build && electron-builder --linux",
+    "dist:mac": "npm run build && electron-builder --mac"
   },
   "author": "Daniel Sosa <danielsosa.dev@gmail.com>",
   "license": "MIT",
@@ -48,6 +49,15 @@
       "target": "deb",
       "icon": "./build/icon.icns",
       "category": ""
+    },
+    "mac": {
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "target": [
+        "dmg"
+      ]
     }
   }
 }
