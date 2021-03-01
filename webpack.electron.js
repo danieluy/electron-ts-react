@@ -4,7 +4,7 @@ module.exports = {
   // Electron Entrypoint
   entry: {
     main: path.join(__dirname, 'src', 'main', 'index.ts'),
-    preload: path.join(__dirname, 'src', 'bridge', 'preload.ts'),
+    preload: path.join(__dirname, 'src', 'bridge', 'index.ts'),
   },
   target: 'electron-main',
   resolve: {

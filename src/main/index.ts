@@ -13,7 +13,7 @@ export const createWindow = async (): Promise<BrowserWindow | undefined> => {
       }
     });
 
-    
+
     if (BUILD.PACKED || ENV.PROD) {
       await win.loadFile(MAIN_WINDOW_TEMPLATE);
     }
@@ -25,6 +25,6 @@ export const createWindow = async (): Promise<BrowserWindow | undefined> => {
   } catch (error) {
     console.error(error);
   }
-}
+};
 
 app.on('ready', createWindow);
