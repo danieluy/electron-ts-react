@@ -22,6 +22,7 @@ If you aren't sure how to keep being safe and still use the native capabilities,
   - Ignored directory.
   - Contains dependencies files.
 - **/src** - Here's where you write code.
+  - **/src/assets** - Place here all files you want to load from the renderer process.
   - **/src/main** - Electron code.
   - **/src/renderer** - UI code.
   - **/src/bridge** - Low level APIs exposed to the UI.

@@ -1,6 +1,6 @@
 {
   "name": "electron-ts-react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Electron + TypeScript + React Template",
   "homepage": "some-page.com",
   "main": "dist/main.js",
@@ -23,6 +23,7 @@
     "css-loader": "^5.0.2",
     "electron": "^11.2.3",
     "electron-builder": "^22.9.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.0.0",
     "nodemon": "^2.0.7",
     "react": "^17.0.1",
@@ -43,7 +44,8 @@
       "./build/**/*",
       "./dist/*.js",
       "./dist/*.html",
-      "./dist/*.js.map"
+      "./dist/*.js.map",
+      "./src/assets/**/*"
     ],
     "linux": {
       "target": "deb",
